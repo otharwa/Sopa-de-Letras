@@ -145,9 +145,9 @@ class Crossword {
 				if($letter_word === $this->__word[0])
 					continue;
 				if($searchLetter === null)
-					$searchLetter	= $this->nextLetter($let, $mtx, $letter_word); // Coordenadas donde aparece la letra I
+					$searchLetter	= $this->__nextLetter($let, $mtx, $letter_word); // Coordenadas donde aparece la letra I
 				else
-					$searchLetter	= $this->nextLetter($searchLetter, $mtx, $letter_word); // Coordenadas donde aparece la letra E
+					$searchLetter	= $this->__nextLetter($searchLetter, $mtx, $letter_word); // Coordenadas donde aparece la letra E
 			}
 
 			$count = $count + $countTimes($searchLetter);
@@ -165,7 +165,7 @@ class Crossword {
  * @param string $letterToFind	- Letra susera a buscar 
  * @return array
 */
-	public function nextLetter($letter=null, &$matrix=null, $letterToFind=null){
+	private function __nextLetter($letter=null, &$matrix=null, $letterToFind=null){
 		if(isset($letter[0]) && !isset($letter[0][0])) {
 			$tmp_a	= $this->__directions_values;
 			foreach ($tmp_a as $key => $value) {
