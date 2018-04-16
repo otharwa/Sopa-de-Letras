@@ -51,7 +51,8 @@ $puzzle = new Crossword();
 		<div class="text-center mt-4" id="answer">
 			<h2 class="h3 mb-3 font-weight-normal">Veces que aparece: <strong id="answer_number">8</strong></h1>
 			<h3 class="h4 mb-3 font-weight-normal">Matriz:</h1>
-			<div id="matrix_content"></div>
+			<table class="table" id="matrix_content">
+			</table>
 		</div>
 	</form>
 <script type="text/javascript" src="./script.js"></script>

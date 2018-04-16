@@ -15,9 +15,13 @@
 			return;
 		$('#answer_number').html(res.countWordAppers);
 
-		var matrixToText	= [];
-		fullMatrix[res.selectedMatrix].forEach(function(row,i){
-			matrixToText.push($('<p>' + row.toString() + '</p>'))
+		var matrixToText	= $('<tbody></tbody>');
+		fullMatrix[res.selectedMatrix].forEach(function(row, row_index){
+			var __tr	= $('<tr></tr>');
+			row.forEach(function(letter, column_index){
+				__tr.append($('<td>' + letter + '</td>'));
+			});
+			matrixToText.append(__tr);
 		});
 		$('#matrix_content').html('');
 		$('#matrix_content').append(matrixToText);
