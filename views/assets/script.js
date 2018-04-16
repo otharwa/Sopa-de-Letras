@@ -32,8 +32,6 @@
 			dataType: 'json',
 			success: function(data, status){
 				that.printAnswer(data);
-				console.log(status);
-				console.log(data);
 			}
 		});
 		return false;
