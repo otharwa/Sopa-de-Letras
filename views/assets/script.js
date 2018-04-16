@@ -11,8 +11,6 @@
 	$('#inputGroupSelect01').append(this.matrixOptions);
 
 	this.printAnswer	= function(res){
-		console.log(typeof res);
-		console.log(typeof res.countWordAppers);
 		if(typeof res.countWordAppers !== 'number')
 			return;
 		$('#answer_number').html(res.countWordAppers);
