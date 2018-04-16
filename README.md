@@ -1,14 +1,16 @@
 ### Sopa de letras
 
 Para instalar el servidor:
-dentro de la carpeta del proyecto 
-
+dentro de la carpeta del proyecto   
 `npm i`
 
-Instalar dependencias globales:
 
-
+Instalar dependencias globales:   
 `sudo npm i -g babel-cli nodemon`
+
+
+Ejectuar servidor en http://localhost:3000   
+`npm start`
 
 
 -----------------------------------
